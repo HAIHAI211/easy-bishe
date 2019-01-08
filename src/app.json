@@ -18,12 +18,12 @@
     "borderStyle": "black",
     "list": [{
       "pagePath": "pages/index/main",
-      "text": "财务",
+      "text": "模板",
       "iconPath": "/static/img/financial.png",
       "selectedIconPath": "/static/img/financial-active.png"
     }, {
       "pagePath": "pages/account/main",
-      "text": "账号",
+      "text": "我的",
       "iconPath": "/static/img/account.png",
       "selectedIconPath": "/static/img/account-active.png"
     }]
