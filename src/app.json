@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/index/main",
+    "pages/account/main",
+    "pages/financial-add/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#F5F5F5",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "harrison&lanny",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#000000",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [{
+      "pagePath": "pages/index/main",
+      "text": "财务",
+      "iconPath": "/static/img/financial.png",
+      "selectedIconPath": "/static/img/financial-active.png"
+    }, {
+      "pagePath": "pages/account/main",
+      "text": "账号",
+      "iconPath": "/static/img/account.png",
+      "selectedIconPath": "/static/img/account-active.png"
+    }]
+  }
+}
