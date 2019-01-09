@@ -1,3 +1,4 @@
 {
-  "enablePullDownRefresh": true
+  "enablePullDownRefresh": false,
+  "navigationBarTitleText": "轻松毕设 分类"
 }

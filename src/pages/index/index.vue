@@ -1,10 +1,10 @@
 <template>
   <div class="index-page">
     <div class="head">
-      <div class="head-item">
+      <navigator class="head-item" hover-class="none" url="/pages/category/main">
         <image class="icon" src="/static/img/check-type.png"></image>
         <div class="name">切换题型</div>
-      </div>
+      </navigator>
       <div class="head-item">
         <image class="icon" src="/static/img/kefu.png"></image>
         <div class="name">咨询客服</div>
