@@ -1,9 +1,7 @@
 <template>
   <div :class="['tab-bar', {'fix': fix}]">
     <div v-for="(item,index) in items"
-               open-type="redirect"
                :key="index"
-               hover-class="none"
                :class="['bar-item',{'active': index === activeIndex}]"
                @click.stop="toPage(index === activeIndex, item.url)">
       <span :class="['iconfont',item.icon]"/>

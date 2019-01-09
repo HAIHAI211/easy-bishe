@@ -10,46 +10,17 @@
         <div class="name">咨询客服</div>
       </div>
     </div>
-    <run-loading :state="loadingState"/>
+    <my-tab-bar :activeIndex="0"/>
   </div>
 </template>
 <script>
-import {mapActions} from 'vuex'
-import {getMonthMasters} from '@/http/api'
-import PullToRefreshMixin from '../../utils/harrison-mp-utils/mixin/pullToRefreshMixin'
-import RunLoading from '@/components/run-loading'
-export default {
-  mixins: [PullToRefreshMixin],
-  components: {
-    RunLoading
-  },
-  data () {
-    return {
-      apis: [getMonthMasters]
+  import MyTabBar from '@/components/my-tab-bar'
+
+  export default {
+    components: {
+      MyTabBar
     }
-  },
-  computed: {
-    formatDates () {
-      let result = this.activePage.list.map(e => e.financialDate.slice(0, -3))
-      return result
-    }
-  },
-  methods: {
-    ...mapActions(['FETCH_FINANCIAL_CATEGORY_LIST', 'FETCH_FINANCIAL_USER_LIST']),
-    _monthCardClick (masterId) {
-      wx.navigateTo({
-        url: `/pages/financial-add/main?type=edit&masterId=${masterId}`
-      })
-    }
-  },
-  async mounted () {
-    this.FETCH_FINANCIAL_CATEGORY_LIST()
-    this.FETCH_FINANCIAL_USER_LIST()
-  },
-  onShow () {
-    this.fetchList()
   }
-}
 </script>
 
 <style lang="stylus" scoped>

@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/main",
+    "pages/me/main",
     "pages/account/main",
     "pages/financial-add/main"
   ],
@@ -18,14 +19,10 @@
     "borderStyle": "black",
     "list": [{
       "pagePath": "pages/index/main",
-      "text": "模板",
-      "iconPath": "/static/img/financial.png",
-      "selectedIconPath": "/static/img/financial-active.png"
+      "text": "首页xxx"
     }, {
-      "pagePath": "pages/account/main",
-      "text": "我的",
-      "iconPath": "/static/img/account.png",
-      "selectedIconPath": "/static/img/account-active.png"
+      "pagePath": "pages/me/main",
+      "text": "我的xxx"
     }]
   }
 }
