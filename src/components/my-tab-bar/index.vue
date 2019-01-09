@@ -8,9 +8,11 @@
       <div :class="['iconfont', barItem.icon]"></div>
       <div class="name">{{ barItem.name }}</div>
     </navigator>
-    <div class="middle-item">
-      <div class="serve"></div>
-    </div>
+    <!--<div class="middle-item">-->
+      <!--&lt;!&ndash;<div class="serve"></div>&ndash;&gt;-->
+      <!--<image src="/static/img/test1.png" class="test"></image>-->
+      <!--<div class="text">定制资料</div>-->
+    <!--</div>-->
   </div>
 </template>
 <script>
@@ -87,7 +89,23 @@
         height 100rpx
         border-radius 50%
         border 1rpx solid main-color
+        margin-top -6rpx
+      }
+      .test{
+        flex 0 0 auto
+        width 120rpx
+        height 120rpx
+        margin-top - 60rpx
+      }
+      .text{
         margin-top -20rpx
+        font-size 20rpx
+        color #fff
+        padding 2rpx 8rpx
+        border-radius 18rpx
+        background #8CD5CA
+        background: -webkit-linear-gradient(to right, #8CD5CA, #71C6B8);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #8CD5CA, #71C6B8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       }
     }
   }

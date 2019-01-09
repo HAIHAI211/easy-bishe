@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/main",
     "pages/me/main",
+    "pages/category/main",
     "pages/account/main",
     "pages/financial-add/main"
   ],
