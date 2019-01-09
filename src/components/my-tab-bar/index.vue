@@ -8,6 +8,9 @@
       <div :class="['iconfont', barItem.icon]"></div>
       <div class="name">{{ barItem.name }}</div>
     </navigator>
+    <div class="middle-item">
+      <div class="serve"></div>
+    </div>
   </div>
 </template>
 <script>
@@ -68,6 +71,23 @@
         .name{
           color #333
         }
+      }
+    }
+    .middle-item{
+      position absolute
+      top 0
+      left 250rpx
+      width 250rpx
+      height 100rpx
+      display flex
+      flex-direction column
+      align-items center
+      .serve{
+        width 100rpx
+        height 100rpx
+        border-radius 50%
+        border 1rpx solid main-color
+        margin-top -20rpx
       }
     }
   }
