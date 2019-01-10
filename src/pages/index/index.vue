@@ -12,6 +12,26 @@
         <div class="name">咨询客服</div>
       </div>
     </div>
+    <div class="class-bar">
+      <div class="class-bar-item">
+        <div class="icon">
+          <image class="img" src="/static/img/class-free.png"></image>
+        </div>
+        <div class="name">免费课</div>
+      </div>
+      <div class="class-bar-item">
+        <div class="icon">
+          <image class="img" src="/static/img/class-common.png"></image>
+        </div>
+        <div class="name">系统班</div>
+      </div>
+      <div class="class-bar-item">
+        <div class="icon">
+          <image class="img" src="/static/img/class-vip.png"></image>
+        </div>
+        <div class="name">精品班</div>
+      </div>
+    </div>
     <my-tab-bar :activeIndex="0"/>
   </div>
 </template>
@@ -62,6 +82,7 @@
       align-items center
       justify-content space-between
       background #fff
+      border-bottom 1rpx solid #DCDCDC
       padding 20rpx 30rpx
       .head-item{
         display flex
@@ -74,6 +95,33 @@
         .name{
           color #636363
           font-size 30rpx
+        }
+      }
+    }
+    .class-bar{
+      background #fff
+      padding 30rpx 0
+      display flex
+      .class-bar-item{
+        flex 1 0 0
+        display flex
+        flex-direction column
+        align-items center
+        .icon{
+          width 120rpx
+          height 120rpx
+          background #F6F6F6
+          border-radius 50%
+          margin-bottom 20rpx
+          center()
+          .img{
+            width 40rpx
+            height 40rpx
+          }
+        }
+        .name{
+          font-size 30rpx
+          color #333
         }
       }
     }
