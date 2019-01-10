@@ -37,14 +37,12 @@
         <div class="title">免费课</div>
         <div class="more">更多 ></div>
       </div>
-      <scroll-view scroll-x>
-        <div class="free-class-list">
-          <div class="free-class-item">
-          </div>
-          <div class="free-class-item">
-          </div>
-          <div class="free-class-item">
-          </div>
+      <scroll-view scroll-x class="scroll-view-h my-scroll-view">
+        <div class="free-class-item">
+        </div>
+        <div class="free-class-item">
+        </div>
+        <div class="free-class-item">
         </div>
       </scroll-view>
     </div>
@@ -178,16 +176,15 @@
         }
       }
       &.class-free{
-        .free-class-list{
-          display flex
-          padding 0 20rpx
+        .my-scroll-view{
+          padding-right 20rpx
           .free-class-item{
-            flex 0 0 auto
+            display inline-block
             width 560rpx
             height 300rpx
             background main-color
             border-radius 12rpx
-            margin-right 20rpx
+            margin-left 20rpx
           }
         }
       }

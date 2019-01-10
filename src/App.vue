@@ -2,6 +2,12 @@
 export default {
   onLaunch () {
     wx.hideTabBar()
+  },
+  onShow () {
+    wx.hideTabBar()
+  },
+  onHide () {
+    wx.hideTabBar()
   }
 }
 </script>
@@ -12,6 +18,10 @@ export default {
     background:#F5F5F5;
     min-height: 100%;
     padding-bottom tab-bar-height
+    .scroll-view-h{
+      width auto
+      white-space nowrap
+    }
     // animation: name duration timing-function delay iteration-count direction;
     .up-down-animation{
       animation: up-down-animation .5s ease-in 0s infinite alternate;
