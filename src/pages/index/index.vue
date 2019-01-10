@@ -1,10 +1,6 @@
 <template>
   <div class="index-page">
     <div class="head">
-      <!--<div class="head-item" @click="_checkType">-->
-        <!--<image class="icon" src="/static/img/check-type.png"></image>-->
-        <!--<div class="name">切换毕设类型</div>-->
-      <!--</div>-->
       <picker @change="_typeChange" :value="initTypeIndex" :range="types" range-key="label">
         <div class="head-item">
           <image class="icon" src="/static/img/check-type.png"></image>
