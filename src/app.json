@@ -10,7 +10,7 @@
     "backgroundTextStyle": "dark",
     "backgroundColor": "#F5F5F5",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "harrison&lanny",
+    "navigationBarTitleText": "小程序毕设",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

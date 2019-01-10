@@ -1,10 +1,16 @@
 <template>
   <div class="index-page">
     <div class="head">
-      <navigator class="head-item" hover-class="none" url="/pages/category/main">
-        <image class="icon" src="/static/img/check-type.png"></image>
-        <div class="name">切换题型</div>
-      </navigator>
+      <!--<div class="head-item" @click="_checkType">-->
+        <!--<image class="icon" src="/static/img/check-type.png"></image>-->
+        <!--<div class="name">切换毕设类型</div>-->
+      <!--</div>-->
+      <picker @change="_typeChange" :value="initTypeIndex" :range="types" range-key="label">
+        <div class="head-item">
+          <image class="icon" src="/static/img/check-type.png"></image>
+          <div class="name">切换毕设类型</div>
+        </div>
+      </picker>
       <div class="head-item">
         <image class="icon" src="/static/img/kefu.png"></image>
         <div class="name">咨询客服</div>
@@ -15,10 +21,38 @@
 </template>
 <script>
   import MyTabBar from '@/components/my-tab-bar'
-
+  import MyPicker from '@/components/my-picker'
   export default {
     components: {
-      MyTabBar
+      MyTabBar,
+      MyPicker
+    },
+    data () {
+      return {
+        types: [
+          {
+            value: 'mp',
+            label: '小程序'
+          },
+          {
+            value: 'app',
+            label: 'APP(安卓,苹果)'
+          },
+          {
+            value: 'web',
+            label: 'WEB(H5,网站)'
+          }
+        ],
+        initTypeIndex: 0
+      }
+    },
+    methods: {
+      _typeChange (e) {
+        console.log(e.mp.detail.value)
+        wx.setNavigationBarTitle({
+          title: this.types[e.mp.detail.value].label + '毕设'
+        })
+      }
     }
   }
 </script>

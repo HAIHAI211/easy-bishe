@@ -69,6 +69,7 @@
      _change (e) {
        console.log('组件e', e.mp.detail.value)
        this.index = e.mp.detail.value // 实际改变的是selfValue
+       this.$emit('change', this.range[this.index])
      }
    }
  }
