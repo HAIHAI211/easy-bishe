@@ -43,12 +43,13 @@
 </script>
 <style scoped lang="stylus">
   @import "~@/common/style/color.styl"
+  @import "~@/common/style/size.styl"
   .my-tab-bar{
     position fixed
     left 0
     bottom 0
     width 750rpx
-    height 100rpx
+    height tab-bar-height
     background #fff
     display flex
     justify-content space-between

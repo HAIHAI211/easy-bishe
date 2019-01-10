@@ -8,7 +8,7 @@
   ],
   "window": {
     "backgroundTextStyle": "dark",
-    "backgroundColor": "#F5F5F5",
+    "backgroundColor": "#fff",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "小程序毕设",
     "navigationBarTextStyle": "black"

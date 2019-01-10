@@ -32,6 +32,34 @@
         <div class="name">精品班</div>
       </div>
     </div>
+    <div class="class class-free">
+      <div class="class-head">
+        <div class="title">免费课</div>
+        <div class="more">更多 ></div>
+      </div>
+      <scroll-view scroll-x>
+        <div class="free-class-list">
+          <div class="free-class-item">
+          </div>
+          <div class="free-class-item">
+          </div>
+          <div class="free-class-item">
+          </div>
+        </div>
+      </scroll-view>
+    </div>
+    <div class="class class-common">
+      <div class="class-head">
+        <div class="title">系统班</div>
+      </div>
+      <div class="class-item"></div>
+    </div>
+    <div class="class class-vip">
+      <div class="class-head">
+        <div class="title">精品班</div>
+      </div>
+      <div class="class-item"></div>
+    </div>
     <my-tab-bar :activeIndex="0"/>
   </div>
 </template>
@@ -82,7 +110,7 @@
       align-items center
       justify-content space-between
       background #fff
-      border-bottom 1rpx solid #DCDCDC
+      border-bottom 1rpx solid line-color
       padding 20rpx 30rpx
       .head-item{
         display flex
@@ -100,6 +128,7 @@
     }
     .class-bar{
       background #fff
+      border-bottom 1rpx solid line-color
       padding 30rpx 0
       display flex
       .class-bar-item{
@@ -108,20 +137,76 @@
         flex-direction column
         align-items center
         .icon{
-          width 120rpx
-          height 120rpx
+          width 110rpx
+          height 110rpx
           background #F6F6F6
           border-radius 50%
-          margin-bottom 20rpx
+          margin-bottom 26rpx
           center()
           .img{
-            width 40rpx
-            height 40rpx
+            width 50rpx
+            height 50rpx
           }
         }
         .name{
-          font-size 30rpx
+          font-size 28rpx
           color #333
+        }
+      }
+    }
+    .class{
+      background #fff
+      border-top 1rpx solid line-color
+      border-bottom 1rpx solid line-color
+      margin-top 30rpx
+      padding-bottom 30rpx
+      .class-head{
+        padding 25rpx 0rpx
+        display flex
+        align-items center
+        justify-content center
+        position relative
+        .title{
+          font-size 30rpx
+          color #333333
+        }
+        .more{
+          position absolute
+          right 10rpx
+          font-size 25rpx
+          color #B3B3B3
+        }
+      }
+      &.class-free{
+        .free-class-list{
+          display flex
+          padding 0 20rpx
+          .free-class-item{
+            flex 0 0 auto
+            width 560rpx
+            height 300rpx
+            background main-color
+            border-radius 12rpx
+            margin-right 20rpx
+          }
+        }
+      }
+      &.class-common{
+        .class-item{
+          margin 0 auto
+          width 700rpx
+          height 390rpx
+          border-radius 12rpx
+          background main-color
+        }
+      }
+      &.class-vip{
+        .class-item{
+          margin 0 auto
+          width 700rpx
+          height 390rpx
+          border-radius 12rpx
+          background main-color
         }
       }
     }

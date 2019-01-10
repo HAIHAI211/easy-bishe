@@ -7,9 +7,11 @@ export default {
 </script>
 
 <style lang="stylus">
+  @import "~@/common/style/size.styl"
   page{
     background:#F5F5F5;
-    height: 100%;
+    min-height: 100%;
+    padding-bottom tab-bar-height
     // animation: name duration timing-function delay iteration-count direction;
     .up-down-animation{
       animation: up-down-animation .5s ease-in 0s infinite alternate;
