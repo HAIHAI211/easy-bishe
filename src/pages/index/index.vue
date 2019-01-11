@@ -12,7 +12,7 @@
         <div class="name">咨询客服</div>
       </div>
     </div>
-    <!--<my-ad :type="types[activeTypeIndex].value"></my-ad>-->
+    <my-ad :type="types[activeTypeIndex].value"></my-ad>
     <div class="class-bar">
       <div class="class-bar-item">
         <div class="icon">
@@ -51,7 +51,9 @@
       <div class="class-head">
         <div class="title">系统班</div>
       </div>
-      <div class="class-item"></div>
+      <div class="class-item">
+        <image class="class-item-bg-img" src="/static/img/jiguang.jpg"></image>
+      </div>
     </div>
     <div class="class class-vip">
       <div class="class-head">
@@ -200,6 +202,15 @@
           height 390rpx
           border-radius 12rpx
           background main-color
+          position relative
+          overflow hidden
+          .class-item-bg-img{
+            position absolute
+            top 0
+            left 0
+            width 100%
+            height 100%
+          }
         }
       }
       &.class-vip{
