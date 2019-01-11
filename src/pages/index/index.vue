@@ -12,6 +12,7 @@
         <div class="name">咨询客服</div>
       </div>
     </div>
+    <my-ad :type="types[activeTypeIndex].value"></my-ad>
     <div class="class-bar">
       <div class="class-bar-item">
         <div class="icon">
@@ -64,10 +65,12 @@
 <script>
   import MyTabBar from '@/components/my-tab-bar'
   import MyPicker from '@/components/my-picker'
+  import MyAd from '@/components/my-ad'
   export default {
     components: {
       MyTabBar,
-      MyPicker
+      MyPicker,
+      MyAd
     },
     data () {
       return {
@@ -85,12 +88,14 @@
             label: 'WEB(H5,网站)'
           }
         ],
-        initTypeIndex: 0
+        initTypeIndex: 0,
+        activeTypeIndex: 0
       }
     },
     methods: {
       _typeChange (e) {
         console.log(e.mp.detail.value)
+        this.activeTypeIndex = e.mp.detail.value
         wx.setNavigationBarTitle({
           title: this.types[e.mp.detail.value].label + '毕设'
         })
