@@ -12,7 +12,7 @@
         <div class="name">咨询客服</div>
       </div>
     </div>
-    <my-ad :type="types[activeTypeIndex].value"></my-ad>
+    <!--<my-ad :type="types[activeTypeIndex].value"></my-ad>-->
     <div class="class-bar">
       <div class="class-bar-item">
         <div class="icon">
