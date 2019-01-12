@@ -1,7 +1,8 @@
 <template>
-  <div class="ad" :style="{backgroundColor: bgColor}">
-    <image class="ad-img" :src="src" :style="{width: imgWidth,height:imgHeight}"></image>
-    <div class="name">{{name}}</div>
+  <div class="ad">
+    <image class="ad-img" :src="src"></image>
+    <div class="ad-title">{{ title }}</div>
+    <div class="ad-sub-title">{{ subTitle }}</div>
   </div>
 </template>
 <script>
@@ -16,51 +17,31 @@
       src () {
         switch (this.type) {
           case 'mp':
-            return '/static/img/app.png'
+            return '/static/img/dev-mp.png'
           case 'app':
-            return ''
+            return '/static/img/dev-app.png'
           case 'web':
-            return '/static/img/web.png'
+            return '/static/img/dev-web.png'
         }
       },
-      name () {
+      title () {
         switch (this.type) {
           case 'mp':
-            return ''
+            return '一个好汉三个帮'
           case 'app':
-            return ''
+            return '好汉不提当年勇'
           case 'web':
-            return ''
+            return '人在江湖身不由己'
         }
       },
-      bgColor () {
+      subTitle () {
         switch (this.type) {
           case 'mp':
-            return '#F4CE6C'
+            return '帮你个屁哦'
           case 'app':
-            return ''
+            return '畜生驴一样'
           case 'web':
-            return '#364153'
-        }
-      },
-      imgWidth () {
-        switch (this.type) {
-          case 'mp':
-            return '78rpx'
-          case 'app':
-            return ''
-          case 'web':
-            return '176rpx'
-        }
-      },
-      imgHeight () {
-        switch (this.type) {
-          case 'mp':
-            return '146rpx'
-          case 'app':
-            return ''
-          case 'web':
-            return '154rpx'
+            return '渣渣你是个呆头鹅'
         }
       }
     }
@@ -70,13 +51,28 @@
   .ad{
     width 750rpx
     height 400rpx
+    position relative
     display flex
     flex-direction column
     justify-content center
     align-items center
     .ad-img{
-      width 78rpx
-      height 146rpx
+      position absolute
+      z-index -1
+      top 0
+      left 0
+      width 100%
+      height 100%
+    }
+    .ad-title{
+      color: #444;
+      font-weight: bold;
+      font-size: 45rpx;
+      margin-bottom 20rpx
+    }
+    .ad-sub-title{
+      font-size 32rpx
+      color #444444
     }
   }
 </style>
