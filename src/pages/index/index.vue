@@ -1,5 +1,5 @@
 <template>
-  <div class="index-page" :style="{height:showDetail ? '0rpx': 'auto'}">
+  <div class="index-page">
     <!--head 高92rpx-->
     <div class="head">
       <picker @change="_typeChange" :value="initTypeIndex" :range="types" range-key="label">
@@ -14,7 +14,7 @@
       </div>
     </div>
     <!--ad 高400rpx-->
-    <my-ad :type="types[activeTypeIndex].value"></my-ad>
+    <!--<my-ad :type="types[activeTypeIndex].value"></my-ad>-->
     <!--bar 高236rpx-->
     <div class="class-bar">
       <div class="class-bar-item">
@@ -52,24 +52,20 @@
       </scroll-view>
     </div>
     <!--92+400+236+432+30=1190rpx-->
-    <div :class="['try', {'try-detail': showDetail}]" @click="_tryclick">
-      <image src="/static/img/dev-web.png" class="try-img"></image>
-      <div class="iconfont icon-guanbi"></div>
+    <div class="class class-common">
+      <div class="class-head">
+        <div class="title">系统班</div>
+        <!--<div class="iconfont icon-guanbi" v-if="showDetail" @click="_closeDetail"></div>-->
+      </div>
+      <div class="class-item">
+      </div>
     </div>
-    <!--<div class="class class-common">-->
-      <!--<div class="class-head">-->
-        <!--<div class="title">系统班</div>-->
-        <!--&lt;!&ndash;<div class="iconfont icon-guanbi" v-if="showDetail" @click="_closeDetail"></div>&ndash;&gt;-->
-      <!--</div>-->
-      <!--<div class="class-item">-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="class class-vip">-->
-      <!--<div class="class-head">-->
-        <!--<div class="title">精品班</div>-->
-      <!--</div>-->
-      <!--<div class="class-item"></div>-->
-    <!--</div>-->
+    <div class="class class-vip">
+      <div class="class-head">
+        <div class="title">精品班</div>
+      </div>
+      <div class="class-item"></div>
+    </div>
     <my-tab-bar :activeIndex="0" v-if="!showDetail"/>
   </div>
 </template>
@@ -148,61 +144,6 @@
   @import "~@/common/style/size.styl"
 
   .index-page{
-    .try{
-      margin 0 auto
-      try-w=676rpx
-      pl=0.5*(750rpx - try-w)
-      try-h=400rpx
-      width try-w
-      height try-h
-      border-radius 12rpx
-      background lightcoral
-      overflow hidden
-      display flex
-      flex-direction column
-      align-items center
-      transition all 0.5s
-      position relative
-      .icon-guanbi{
-        position absolute
-        font-weight bold
-        font-size 30rpx
-        color #333
-        right 30rpx
-        top 12rpx
-        background rgba(255,255,255,0.6)
-        border-radius 50%
-        opacity 0
-        width 50rpx
-        height 50rpx
-        center()
-      }
-      .try-img{
-        width try-w
-        height try-h
-        flex 0 0 auto
-        transition all .5s
-      }
-      .item{
-        width 700rpx
-        height 500rpx
-        margin-bottom 20rpx
-        background lightseagreen
-      }
-      &.try-detail{
-        transform translateY(-1190rpx)
-        width 750rpx
-        height 1200rpx
-        border-radius 0
-        .try-img{
-          width 750rpx
-          height 430rpx
-        }
-        .icon-guanbi{
-          opacity 1
-        }
-      }
-    }
     .head{
       display flex
       align-items center
